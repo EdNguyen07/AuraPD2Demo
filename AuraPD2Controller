@@ -1,3 +1,11 @@
-public class AuraPD2Controller {
-
+public with sharing class AuraPD2Controller {
+    
+	// Use @AuraEnabled to enable clien - and server-side access to the method
+	@AuraEnabled
+    public static String serverEcho (String firstName){
+        //String firstNameStr = (String)JSON.deserialize(firstName, String.class);
+        //return ('Hello from the server, '+ firstNameStr);
+        return firstName;
+       
+    } 
 }
